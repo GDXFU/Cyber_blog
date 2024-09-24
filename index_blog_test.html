@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post 1</title>
+  <link rel="stylesheet" href="styles_post.css">
+</head>
+<body>
+  <header>
+    <h1>CYBER SCOOP</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="blog-post">
+      <div class="blog-layout">
+        <!-- Blog Image Section -->
+        <div class="blog-image-container">
+          <img src="Capture.JPG" alt="Landscape 1" class="post-image fade-in">
+          <!-- Tags Section -->
+        <div class="tags-container">
+            <span class="tag">Encryption</span>
+            <span class="tag">Networking</span>
+            <span class="tag">Password</span>
+            <span class="tag">AI</span>
+            <span class="tag">Tips</span>
+        </div>
+        </div>
+        
+        <!-- Blog Content Section -->
+        <div class="blog-content">
+          <h2>Blog Post 1 Title</h2>
+          <h4> Written by: Gavin Crawford | July 25th 2024</h4>
+          <p>This is the full content of Blog Post 1. You can add as much text as you want to describe the topic in detail. Discuss interesting topics, add insights, and engage the readers.
+            This is the full content of Blog Post 1. You can add as much text as you want to describe the topic in detail. Discuss interesting topics, add insights, and engage the readers.
+            This is the full content of Blog Post 1. You can add as much text as you want to describe the topic in detail. Discuss interesting topics, add insights, and engage the readers.
+            This is the full content of Blog Post 1. You can add as much text as you want to describe the topic in detail. Discuss interesting topics, add insights, and engage the readers.
+            This is the full content of Blog Post 1. You can add as much text as you want to describe the topic in detail. Discuss interesting topics, add insights, and engage the readers.
+            This is the full content of Blog Post 1. You can add as much text as you want to describe the topic in detail. Discuss interesting topics, add insights, and engage the readers.
+            This is the full content of Blog Post 1. You can add as much text as you want to describe the topic in detail. Discuss interesting topics, add insights, and engage the readers.
+            This is the full content of Blog Post 1. You can add as much text as you want to describe the topic in detail. Discuss interesting topics, add insights, and engage the readers.
+            This is the full content of Blog Post 1. You can add as much text as you want to describe the topic in detail. Discuss interesting topics, add insights, and engage the readers.
+            This is the full content of Blog Post 1. You can add as much text as you want to describe the topic in detail. Discuss interesting topics, add insights, and engage the readers.
+            This is the full content of Blog Post 1. You can add as much text as you want to describe the topic in detail. Discuss interesting topics, add insights, and engage the readers.
+            
+          </p>
+          <p>Another paragraph explaining more about the post, keeping readers interested with information, analysis, and thoughts on the topic.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 My Blog. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+<script>
+
+// used to make the hover effect
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+  // Get all image containers
+  const imageContainers = document.querySelectorAll('.blog-image-container');
+  
+  // Iterate through each container
+  imageContainers.forEach(imageContainer => {
+    const image = imageContainer.querySelector('.post-image');
+
+    // Apply mousemove effect to each container
+    imageContainer.addEventListener('mousemove', (e) => {
+      const { offsetX, offsetY, target } = e;
+      const { clientWidth, clientHeight } = target;
+      
+      // Calculate the percentage of mouse movement relative to the image size
+      const moveX = ((offsetX / clientWidth) - 0.5) * 20; // Move X by a percentage
+      const moveY = ((offsetY / clientHeight) - 0.5) * 20; // Move Y by a percentage
+      
+      // Apply transform to move the image slightly
+      image.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+
+    // Reset the image position when the mouse leaves
+    imageContainer.addEventListener('mouseleave', () => {
+      image.style.transform = 'translate(0, 0)';
+    });
+  });
+});
+
+</script>
